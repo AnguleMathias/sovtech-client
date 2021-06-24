@@ -1,13 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import { Provider as ReduxProvider } from "react-redux";
+import { ApolloProvider } from "@apollo/client";
 
-import reportWebVitals from "./reportWebVitals";
+import "./index.css";
+import configureStore from "./Common/store/configureStore";
 import PageTemplate from "./Common/components/templates/PageTemplate";
+import reportWebVitals from "./reportWebVitals";
+
+const store = configure();
 
 ReactDOM.render(
   <React.StrictMode>
-    <PageTemplate />
+    <ReduxProvider store={store}>
+      <ApolloProvider client={client}>
+        <PageTemplate />
+      </ApolloProvider>
+    </ReduxProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
