@@ -2,5 +2,5 @@ import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 export default new ApolloClient({
   cache: new InMemoryCache(),
-  uri: "http://localhost:5000",
+  uri: "https://morning-ravine-72171.herokuapp.com/",
 });

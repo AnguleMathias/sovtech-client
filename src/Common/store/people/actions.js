@@ -1,4 +1,4 @@
-import { fetchPeople } from "../../utils/peopleApi";
+import * as fetchApi from "../../utils/peopleApi";
 
 // action types
 export const LOAD_PEOPLE_SUCCESS = "LOAD_PEOPLE_SUCCESS";
@@ -10,8 +10,8 @@ export const loadPeopleSucess = (people) => {
 
 export const loadPeople = (page) => {
   return function (dispatch) {
-    return fetchPeople
-      .getPeople(page)
+    return fetchApi
+      .fetchPeople(page)
       .then((people) => {
         console.log(people);
         dispatch(loadPeopleSucess(people));

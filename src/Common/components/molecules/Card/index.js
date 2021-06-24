@@ -9,7 +9,6 @@ const Wrapper = styled.div`
   border: 1px solid #62686d;
   border-radius: 5px;
   cursor: pointer;
-  
 
   &:hover {
     background-color: #303e48;
@@ -25,15 +24,18 @@ const Header = styled.header`
 `;
 const Section = styled.section``;
 
-const Card = () => {
+const Card = ({ person }) => {
+  const { name, height, mass, gender, homeworld } = person;
+
   return (
     <Wrapper>
       <Header>Card header</Header>
       <Section>
-        <div>name:</div>
-        <div>height:</div>
-        <div>mass:</div>
-        <div>gender:</div>
+        <div>name: {name}</div>
+        <div>height: {height}</div>
+        <div>mass: {mass}</div>
+        <div>gender: {gender}</div>
+        <div>homeworld: {homeworld}</div>
       </Section>
     </Wrapper>
   );
