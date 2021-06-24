@@ -4,11 +4,12 @@ import { Provider as ReduxProvider } from "react-redux";
 import { ApolloProvider } from "@apollo/client";
 
 import "./index.css";
+import client from "./Common/utils/client";
 import configureStore from "./Common/store/configureStore";
 import PageTemplate from "./Common/components/templates/PageTemplate";
 import reportWebVitals from "./reportWebVitals";
 
-const store = configure();
+const store = configureStore();
 
 ReactDOM.render(
   <React.StrictMode>
