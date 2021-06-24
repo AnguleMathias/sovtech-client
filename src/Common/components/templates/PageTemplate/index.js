@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import StarWarsTeam from "../../../pages/StarWarsTeam";
+
 const Wrapper = styled.div`
   background: url("/background.png") fixed no-repeat;
   background-color: #00050d;
@@ -27,7 +29,7 @@ const Header = styled.section`
 `;
 
 const Content = styled.section`
-  background: #303e48;
+  background: #1b2d3f;
   align-items: center;
   border-radius: 0.3rem 0.3rem;
   display: flex;
@@ -51,7 +53,9 @@ const Footer = styled.section`
 const PageTemplate = () => (
   <Wrapper>
     <Header>Star Wars Characters Logo here</Header>
-    <Content> Cards items here</Content>
+    <Content>
+      <StarWarsTeam />
+    </Content>
     <Footer>Footer content here</Footer>
   </Wrapper>
 );
