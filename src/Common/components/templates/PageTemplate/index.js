@@ -29,15 +29,7 @@ const Header = styled.section`
 
 const Content = styled.section`
   align-items: center;
-  border-radius: 0.3rem 0.3rem;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  width: 94%;
-  height: 100%;
-  box-sizing: border-box;
-  z-index: 1;
-  position: relative;
 `;
 
 const Footer = styled.section`

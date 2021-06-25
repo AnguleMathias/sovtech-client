@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import styled from "styled-components";
+import Loader from "react-loader-spinner";
 
 import * as peopleActions from "../../store/people/actions";
 import UserCards from "../../components/organisms/UserCards";
@@ -24,7 +25,7 @@ const StarWarsTeam = ({ actions, people }) => {
       </CardsWrapper>
     );
   } else {
-    return <>Loading people.... </>;
+    return <Loader type="Puff" color="#00BFFF" height={100} width={100} />;
   }
 };
 
