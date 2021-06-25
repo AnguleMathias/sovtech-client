@@ -6,9 +6,11 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 1.6rem 1.6rem 2.4rem 1.6rem;
-  border: 1px solid #62686d;
   border-radius: 5px;
   cursor: pointer;
+  margin: 1rem;
+  background: #232f37;
+  box-shadow: 1px 8px 24px rgba(0, 0, 0, 0.5);
 
   &:hover {
     background-color: #303e48;

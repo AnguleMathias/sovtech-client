@@ -4,8 +4,7 @@ import styled from "styled-components";
 import StarWarsTeam from "../../../pages/StarWarsTeam";
 
 const Wrapper = styled.div`
-  background: url("/background.png") fixed no-repeat;
-  background-color: #00050d;
+  background-color: #1b2c3f;
   background-position: 50%;
   background-size: 100vw;
   min-height: 100vh;
@@ -29,13 +28,11 @@ const Header = styled.section`
 `;
 
 const Content = styled.section`
-  background: #1b2d3f;
   align-items: center;
   border-radius: 0.3rem 0.3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.5);
   width: 94%;
   height: 100%;
   box-sizing: border-box;

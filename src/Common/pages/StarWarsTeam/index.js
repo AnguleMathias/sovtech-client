@@ -29,8 +29,7 @@ const StarWarsTeam = ({ actions, people }) => {
 };
 
 StarWarsTeam.propTypes = {
-  people: PropTypes.array,
-  loading: PropTypes.bool.isRequired,
+  people: PropTypes.object,
 };
 
 function mapStateToProps(state) {
