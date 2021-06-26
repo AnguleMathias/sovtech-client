@@ -1,36 +1,48 @@
 import React, { useEffect } from "react";
-import PropTypes from "prop-types";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import styled from "styled-components";
 import Loader from "react-loader-spinner";
 
 import * as peopleActions from "../../store/people/actions";
+import PageNavigation from "../../components/organisms/PageNavigation";
 import UserCards from "../../components/organisms/UserCards";
 
 const CardsWrapper = styled.section`
   margin: 0 auto;
   max-width: 100rem;
 `;
+
+let clicked = 1;
 const StarWarsTeam = ({ actions, people }) => {
   useEffect(() => {
     if (people.length === undefined) {
       actions.loadPeople(1);
     }
   });
+
+  const updatePage = async (e) => {
+    clicked = e.target.textContent;
+    return await actions.loadPeople(e.target.textContent);
+  };
+
   if (people.length > 0) {
     return (
-      <CardsWrapper>
-        <UserCards data={people} />
-      </CardsWrapper>
+      <>
+        <CardsWrapper>
+          <UserCards data={people} />
+        </CardsWrapper>
+        <PageNavigation
+          activeLabel="active-page"
+          count={82}
+          updatePage={updatePage}
+          clicked={clicked}
+        />
+      </>
     );
   } else {
     return <Loader type="Puff" color="#00BFFF" height={100} width={100} />;
   }
-};
-
-StarWarsTeam.propTypes = {
-  people: PropTypes.object,
 };
 
 function mapStateToProps(state) {
