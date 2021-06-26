@@ -17,29 +17,44 @@ const Wrapper = styled.div`
   }
 `;
 
-const Header = styled.header`
-  padding-top: 0.75em;
-  padding-bottom: 0.75em;
-  padding-left: 1em;
-  padding-right: 1em;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-`;
 const Section = styled.section``;
+const Label = styled.span`
+  color: #62686d;
+`;
+const LabelValue = styled.span`
+  color: #e9eaea;
+`;
 
 const Card = ({ person }) => {
   const { name, height, mass, gender, homeworld } = person;
 
   return (
-    <Wrapper>
-      <Header>Card header</Header>
-      <Section>
-        <div>name: {name}</div>
-        <div>height: {height}</div>
-        <div>mass: {mass}</div>
-        <div>gender: {gender}</div>
-        <div>homeworld: {homeworld}</div>
-      </Section>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <Section>
+          <div>
+            <Label>Name: </Label>
+            <LabelValue>{name || "-"}</LabelValue>
+          </div>
+          <div>
+            <Label>Height: </Label>
+            <LabelValue>{height || "-"}</LabelValue>
+          </div>
+          <div>
+            <Label>Mass: </Label>
+            <LabelValue>{mass || "-"}</LabelValue>
+          </div>
+          <div>
+            <Label>Gender: </Label>
+            <LabelValue>{gender === "n/a" ? "-" : gender}</LabelValue>
+          </div>
+          <div>
+            <Label>Homeworld: </Label>
+            <LabelValue>{homeworld || "-"}</LabelValue>
+          </div>
+        </Section>
+      </Wrapper>
+    </>
   );
 };
 
