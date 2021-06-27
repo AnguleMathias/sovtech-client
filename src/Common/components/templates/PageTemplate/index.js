@@ -45,7 +45,7 @@ const PageTemplate = () => (
     <Content>
       <StarWarsTeam />
     </Content>
-    <Footer>Footer content here</Footer>
+    <Footer />
   </Wrapper>
 );
 

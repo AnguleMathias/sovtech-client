@@ -17,7 +17,7 @@ const CardItems = styled.div`
 `;
 
 const UserCards = ({ data }) => {
-  console.log("data", data);
+  // console.log("data", data);
   return (
     <CardItems>
       {data.map((person, index) => (

@@ -3,18 +3,19 @@ import { Pagination } from "react-bootstrap";
 
 class PageNavigation extends Component {
   render() {
+    const { clicked, count, pageChanged } = this.props;
     const pages = [];
-    const { clicked, count, updatePage } = this.props;
+    // console.log("props: ", this.props);
     let clickedNumber = Number(clicked);
 
-    for (let i = 1; i < Math.round(count / 8); i++) {
+    for (let pageNumber = 1; pageNumber < Math.round(count / 8); pageNumber++) {
       pages.push(
         <Pagination.Item
-          key={i}
-          onClick={updatePage}
-          active={i === clickedNumber}
+          key={pageNumber}
+          onClick={pageChanged}
+          active={pageNumber === clickedNumber}
         >
-          {i}
+          {pageNumber}
         </Pagination.Item>
       );
     }

@@ -19,11 +19,12 @@ const StarWarsTeam = ({ actions, people }) => {
     if (people.length === undefined) {
       actions.loadPeople(1);
     }
-  });
+  }, []);
 
   const updatePage = async (e) => {
-    clicked = e.target.textContent;
-    return await actions.loadPeople(e.target.textContent);
+    clicked = e.target.text;
+    console.log("clicked", clicked);
+    return await actions.loadPeople(clicked);
   };
 
   if (people.length > 0) {
@@ -33,9 +34,9 @@ const StarWarsTeam = ({ actions, people }) => {
           <UserCards data={people} />
         </CardsWrapper>
         <PageNavigation
-          activeLabel="active-page"
+          activeLabel={`active-page-${clicked}`}
           count={82}
-          updatePage={updatePage}
+          pageChanged={updatePage}
           clicked={clicked}
         />
       </>

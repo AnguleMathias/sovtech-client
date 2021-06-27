@@ -9,14 +9,15 @@ export const loadPeopleSucess = (people) => {
 };
 
 export const loadPeople = (page) => {
+  // console.log("page at actions:", page);
   return function (dispatch) {
     return fetchApi
       .fetchPeople(page)
       .then((people) => {
-        console.log(people);
         dispatch(loadPeopleSucess(people));
       })
       .catch((error) => {
+        console.log("error at actions:", error);
         throw error;
       });
   };
