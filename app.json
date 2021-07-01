@@ -1,7 +1,14 @@
 {
-  "name": "upper-crown-93461",
+  "name": "sovtech-client",
   "scripts": {},
-  "env": {},
+  "env": {
+    "HEROKU_APP_NAME": {
+      "required": true
+    }
+  },
+  "HEROKU_PARENT_APP_NAME": {
+    "required": true
+  },
   "formation": {
     "web": {
       "quantity": 1
@@ -12,5 +19,6 @@
     {
       "url": "heroku/nodejs"
     }
-  ]
+  ],
+  "stack": "heroku-20"
 }

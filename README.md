@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Deployment
+
+Click to view the [deployed live app](https://60ddb1570e28e8f814e07da1--sovtech.netlify.app/)
+
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -28,3 +33,7 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+## To Do
+* Search People by given name
+* Write tests
