@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Close Icon Medium</title>
+    <defs></defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-966.000000, -282.000000)" fill="#6C7881" fill-rule="nonzero">
+            <polygon id="icon_close_medium" points="973.51688 288.784659 980.263149 282.033782 980.956004 282.72711 974.209734 289.477987 981 296.27289 980.307145 296.966218 973.51688 290.171315 966.692855 297 966 296.306672 972.824025 289.477987 966.043996 282.693328 966.736851 282"></polygon>
+        </g>
+    </g>
+</svg>

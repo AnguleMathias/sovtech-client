@@ -25,6 +25,8 @@ const Header = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #e9eaea;
+  font-size: 2.5rem;
 `;
 
 const Content = styled.section`
@@ -41,7 +43,7 @@ const Footer = styled.section`
 
 const PageTemplate = () => (
   <Wrapper>
-    <Header>Star Wars Characters Logo here</Header>
+    <Header>Star Wars Characters</Header>
     <Content>
       <StarWarsTeam />
     </Content>
