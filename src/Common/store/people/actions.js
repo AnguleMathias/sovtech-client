@@ -1,5 +1,4 @@
 import * as fetchApi from "../../utils/peopleApi";
-import { apiError, makeApiCall } from "../api/actions";
 
 // action types
 export const LOAD_PEOPLE_SUCCESS = "LOAD_PEOPLE_SUCCESS";
@@ -12,7 +11,6 @@ export const loadPeopleSucess = (people) => {
 export const loadPeople = (page) => {
   // console.log("page at actions:", page);
   return function (dispatch) {
-    dispatch(makeApiCall());
     return fetchApi
       .fetchPeople(page)
       .then((people) => {
@@ -20,7 +18,6 @@ export const loadPeople = (page) => {
       })
       .catch((error) => {
         console.log("error at actions:", error);
-        dispatch(apiError());
         throw error;
       });
   };
