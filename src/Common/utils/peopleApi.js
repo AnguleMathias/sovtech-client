@@ -9,7 +9,7 @@ export const fetchPeople = (page) => {
     .query({
       query: GET_PEOPLE,
       variables: {
-        pageNUmber: pages,
+        pageNumber: pages,
       },
     })
     .then(handleResponse)

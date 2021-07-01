@@ -16,18 +16,18 @@ const CardsWrapper = styled.section`
 let clicked = 1;
 const StarWarsTeam = ({ actions, people }) => {
   useEffect(() => {
-    if (people.length === undefined) {
+    if (people?.length === undefined) {
       actions.loadPeople(1);
     }
   }, []);
 
-  const updatePage = async (e) => {
-    clicked = e.target.text;
-    console.log("clicked", clicked);
-    return await actions.loadPeople(clicked);
+  const updatePage = (e) => {
+    clicked = e.target.textContent;
+    return actions.loadPeople(clicked);
   };
+  // console.log("clicked page update: ", clicked);
 
-  if (people.length > 0) {
+  if (people?.length > 0) {
     return (
       <>
         <CardsWrapper>
